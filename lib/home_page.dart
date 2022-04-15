@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child: Text("Fortune Cookie")),
+        backgroundColor: Colors.deepOrange,
       ),
       body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         Image.asset("assets/images/fortune-cookie.jpg"),

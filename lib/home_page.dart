@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fortune_cookie_app/fortune_cookie.dart';
 import 'package:fortune_cookie_app/fortune_cookie_box.dart';
@@ -26,12 +27,12 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Center(child: Text("Fortune Cookie")),
       ),
-
-      body: Column(children: [
+      body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         Image.asset("assets/images/fortune-cookie.jpg"),
         Text(
           _cookie.message,
-          style: const TextStyle(fontSize: 18),
+          style: const TextStyle(
+              fontSize: 18, fontStyle: FontStyle.italic, color: Colors.green),
         ),
         SizedBox(
           width: 300,

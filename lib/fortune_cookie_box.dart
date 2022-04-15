@@ -1,5 +1,5 @@
-
 import 'package:fortune_cookie_app/fortune_cookie.dart';
+import 'dart:math';
 
 class FortuneCookieBox {
   final List<FortuneCookie> _cookies = [
@@ -15,13 +15,13 @@ class FortuneCookieBox {
     const FortuneCookie("될성부른 코드는 들여쓰기부터 안다."),
   ];
 
-  int _index = 0;
+  // int _index = 0;
 
   FortuneCookie get pick {
-    if (_index == _cookies.length) {
-      _index = 0;
-    }
-
-    return _cookies[_index++];
+    // if (_index == _cookies.length) {
+    //   _index = 0;
+    // }
+    var _randomIndex = Random().nextInt(_cookies.length);
+    return _cookies[_randomIndex];
   }
 }

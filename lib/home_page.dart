@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fortune_cookie_app/fortune_cookie.dart';
+import 'package:fortune_cookie_app/fortune_cookie_box.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,10 +10,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // TODO: 14. FortuneCookieBox 변수를 선언하고 초기화 해주세요.
-  // TODO: 15. 현재 표시 중인 쿠키를 가르키는 _cookie 변수를 선언해주세요.
+  final FortuneCookieBox _cookieBox = FortuneCookieBox();
+  late FortuneCookie _cookie;
 
-  // TODO: 16. 앱 실행 시 표시될 쿠키를 초기화해주세요. (Hint! initState 메서드를 오버라이드 해주세요.)
+  @override
+  void initState() {
+    super.initState();
+
+    _cookie = _cookieBox.pick;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +50,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
 
 // TODO: 19. 이제 각자의 취향대로 앱을 꾸며주세요!
